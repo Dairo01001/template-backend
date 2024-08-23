@@ -1,6 +1,7 @@
 import express, { Application } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
+import 'dotenv/config';
 import routes from './routes';
 import { ORIGIN, PORT } from './config';
 import { unkanowEndpoint } from './middlewares';
