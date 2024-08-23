@@ -1,8 +1,9 @@
 import express, { Application } from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
+import routes from './routes';
 import { PORT } from './config';
 import { unkanowEndpoint } from './middlewares';
-import morgan from 'morgan';
-import routes from './routes';
 
 const createApp = () => {
   const app: Application = express();
@@ -12,6 +13,12 @@ const createApp = () => {
   app.use(express.urlencoded({ extended: true }));
   app.use(morgan('dev'));
 
+  app.use(
+    cors({
+      origin: '*',
+      credentials: true,
+    }),
+  );
   routes(app);
   app.use(unkanowEndpoint);
 

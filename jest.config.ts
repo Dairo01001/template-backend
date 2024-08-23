@@ -28,7 +28,7 @@ const config: Config = {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: ['/node_modules/', '/dist/'],
+  coveragePathIgnorePatterns: ['/node_modules/', '/dist/', '/src/config/'],
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
