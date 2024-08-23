@@ -3,10 +3,10 @@
 
 ## Tecnologias
 
-
-- TypeScript
 - Node.js
 - Express
+- Prisma
+- TypeScript
 - dotenv
 - Jest
 - Supertest
@@ -29,3 +29,7 @@ npm run dev
 ```bash
 npm run test
 ```
+## Config
+
+- .env.test
+- .env.development
