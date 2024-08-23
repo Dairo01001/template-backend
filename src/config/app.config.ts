@@ -14,3 +14,4 @@ if (NODE_ENV !== 'test' && NODE_ENV !== 'development') {
 logger.info(`NODE_ENV: ${NODE_ENV}`);
 
 export const PORT = process.env.PORT || 3000;
+export const ORIGIN = process.env.ORIGIN || 'http://localhost:3000';

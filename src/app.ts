@@ -2,7 +2,7 @@ import express, { Application } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import routes from './routes';
-import { PORT } from './config';
+import { ORIGIN, PORT } from './config';
 import { unkanowEndpoint } from './middlewares';
 
 const createApp = () => {
@@ -15,7 +15,7 @@ const createApp = () => {
 
   app.use(
     cors({
-      origin: '*',
+      origin: ORIGIN,
       credentials: true,
     }),
   );
